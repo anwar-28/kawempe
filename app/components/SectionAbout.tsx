@@ -1,23 +1,23 @@
-import { Crimson_Text } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 import Link from "next/link";
 import { MapPin, Phone, Clock } from "lucide-react";
 
-const schoolFont = Crimson_Text({
+const schoolFont = Crimson_Pro({
   subsets: ["latin"],
   weight: "400",
 });
 
 const SectionAbout = () => {
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-20 items-center">
+    <section className="bg-gray-50 pb-24 px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-20 items-center">
         {/* Color pillars */}
         <div className="flex gap-4 lg:justify-start justify-center lg:gap-6">
           {["bg-blue-500", "bg-green-400", "bg-amber-400", "bg-red-500"].map(
             (color, i) => (
               <div
                 key={i}
-                className={`w-4 lg:w-6 h-40 lg:h-112 ${color} rounded-b-full`}
+                className={`w-4 lg:w-8 h-40 lg:h-112 ${color} rounded-b-full`}
               />
             ),
           )}

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section className="relative  max-w-screen h-screen text-white">
       {/* Background image */}
-      <div className="absolute inset-0 bg-[url(/back.png)] bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url(/back.png)] bg-cover bg-no-repeat" />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />

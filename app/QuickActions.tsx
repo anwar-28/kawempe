@@ -1,8 +1,15 @@
 "use client";
-import { Crimson_Text } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 import Link from "next/link";
+import {
+  PhoneCall,
+  ClipboardList,
+  GraduationCap,
+  Newspaper,
+  ArrowRight,
+} from "lucide-react";
 
-const schoolFont = Crimson_Text({
+const schoolFont = Crimson_Pro({
   subsets: ["latin"],
   weight: "400",
 });
@@ -12,62 +19,94 @@ const QuickActions = () => {
     {
       title: "Registration Inquiry",
       description:
-        "Have questions about admissions or enrollment? Contact us for guidance on entry requirements, procedures, and important dates.",
+        "Questions about admissions or enrollment? Get clarity on requirements, procedures, and timelines.",
       buttonText: "Contact Us",
       href: "/contact",
-      bgColor: "bg-red-500",
+      icon: PhoneCall,
+      gradient: "from-red-500 via-rose-500 to-orange-400",
     },
     {
       title: "Online Registration",
       description:
-        "Apply for admission online quickly and easily. Complete the registration process from anywhere at your convenience.",
+        "Apply online with ease. Start and complete your admission process from anywhere.",
       buttonText: "Apply Now",
       href: "/admissions",
-      bgColor: "bg-green-400",
+      icon: ClipboardList,
+      gradient: "from-emerald-400 via-green-500 to-teal-400",
     },
     {
       title: "Academics & Staff",
       description:
-        "Access staff portals, academic resources, and stay updated with school news and events.",
+        "Explore academic programs, staff portals, and essential learning resources.",
       buttonText: "Learn More",
       href: "/academics",
-      bgColor: "bg-blue-400",
+      icon: GraduationCap,
+      gradient: "from-blue-500 via-sky-500 to-cyan-400",
     },
     {
       title: "School News",
       description:
-        "Get the latest updates on events, announcements, and important dates at Kawempe Muslim Secondary School.",
+        "Stay in the loop with announcements, events, and key school updates.",
       buttonText: "View News",
       href: "/news",
-      bgColor: "bg-yellow-400",
+      icon: Newspaper,
+      gradient: "from-yellow-400 via-amber-400 to-orange-400",
     },
   ];
 
   return (
-    <section className="bg-gray-50 text-slate-900 py-24">
+    <section className="text-slate-900 bg-gradient-to-b from-gray-50 to-white pb-28">
       <div className="max-w-7xl mx-auto px-6">
         <h2
-          className={`text-4xl lg:text-5xl font-bold mb-12 text-center ${schoolFont.className}`}
+          className={`text-4xl lg:text-5xl font-bold mb-14 text-center ${schoolFont.className}`}
         >
           Quick Actions
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {actions.map((action, idx) => (
-            <div
-              key={idx}
-              className={`p-6 rounded-xl shadow-lg flex flex-col justify-between ${action.bgColor} text-white hover:scale-105 transition-transform`}
-            >
-              <h3 className="text-xl font-semibold mb-2">{action.title}</h3>
-              <p className="text-sm mb-4">{action.description}</p>
-              <Link
-                href={action.href}
-                className="mt-auto bg-white text-gray-900 font-medium px-4 py-2 rounded-md text-center hover:bg-gray-200 transition"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {actions.map((action, idx) => {
+            const Icon = action.icon;
+
+            return (
+              <div
+                key={idx}
+                className="group relative rounded-2xl p-[1px] overflow-hidden hover:scale-[1.03] transition-transform duration-300"
               >
-                {action.buttonText}
-              </Link>
-            </div>
-          ))}
+                {/* Gradient border */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${action.gradient} opacity-80`}
+                />
+
+                {/* Card */}
+                <div className="relative h-80 rounded-2xl bg-white/90 backdrop-blur-xl p-6 flex flex-col shadow-xl">
+                  <div
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${action.gradient} text-white mb-4`}
+                  >
+                    <Icon size={22} />
+                  </div>
+
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                    {action.title}
+                  </h3>
+
+                  <p className="text-sm text-gray-600 mb-6">
+                    {action.description}
+                  </p>
+
+                  <Link
+                    href={action.href}
+                    className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gray-900 group-hover:text-blue-600 transition"
+                  >
+                    {action.buttonText}
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

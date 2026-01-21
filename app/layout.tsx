@@ -10,9 +10,11 @@ import {
   Zalando_Sans_Expanded,
 } from "next/font/google";
 import "./globals.css";
+import FadeInSection from "./Fade";
+import NavBar from "./components/NavBar";
 
 const montserratFont = Poppins({
-  weight: ["700"],
+  weight: ["500", "700"],
   subsets: ["latin"],
 });
 
@@ -24,12 +26,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={montserratFont.className}>{children}</body>
+      <body className={`${montserratFont.className}`}>
+        <NavBar />
+        <main>
+          <div className="relative bg-[url(/bg2.jpg)] bg-cover bg-center bg-fixed">
+            <FadeInSection delay={0}>
+              {children} {/* or first Hero section */}
+            </FadeInSection>
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

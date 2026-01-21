@@ -1,18 +1,18 @@
 "use client";
-import { Crimson_Text } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 
-const schoolFont = Crimson_Text({
+const schoolFont = Crimson_Pro({
   subsets: ["latin"],
   weight: "400",
 });
 
 const CoreValues = () => {
   const carouselImages = [
-    "/carousel1.jpg",
-    "/carousel2.jpg",
-    "/carousel3.jpg",
-    "/carousel4.jpg",
-    "/carousel5.jpg",
+    "/c1.jpg",
+    "/c2.jpg",
+    "/c3.jpg",
+    "/c4.jpg",
+    "/c5.jpg",
   ];
 
   return (

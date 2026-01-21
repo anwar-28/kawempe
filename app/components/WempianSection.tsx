@@ -1,7 +1,7 @@
 "use client";
-import { Crimson_Text } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 
-const schoolFont = Crimson_Text({
+const schoolFont = Crimson_Pro({
   subsets: ["latin"],
   weight: "400",
 });
@@ -11,21 +11,21 @@ const WempianSection = () => {
     {
       name: "John Doe",
       role: "Student Leader",
-      img: "/student1.jpg",
+      img: "/b1.png",
       description:
         "Our students come from all walks of life, realizing their potential as artists and changemakers.",
     },
     {
       name: "John Doe",
       role: "Student Leader",
-      img: "/student1.jpg",
+      img: "/b2.png",
       description:
         "Our students come from all walks of life, realizing their potential as artists and changemakers.",
     },
     {
       name: "Jane Smith",
       role: "Debate Champion",
-      img: "/student2.jpg",
+      img: "/b3.png",
       description:
         "Our students come from all walks of life, realizing their potential as artists and changemakers.",
     },
@@ -42,7 +42,7 @@ const WempianSection = () => {
 
         <div className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center relative">
           {/* Images */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 lg:items-start relative">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-2 lg:items-start relative">
             {students.map((student, idx) => (
               <div
                 key={idx}

@@ -11,23 +11,58 @@ import QuickActions from "./QuickActions";
 import SectionAbout from "./components/SectionAbout";
 import Vision from "./components/Vision";
 import WempianSection from "./components/WempianSection";
+import FadeInSection from "./Fade";
 
 const Homepage = () => {
   return (
-    <div className="bg-[url(/bg3.jpg)] bg-fixed bg-cover  ">
-      <NavBar />
-      <Hero />
-      <SectionAbout />
-      <HeadMsg />
-      <Mission />
-      <Vision />
-      <CoreValues />
-      <Leader />
-      <QuickActions />
-      <EventsSection />
-      <WempianSection />
-      <LatestNews />
-      <Footer />
+    <div>
+      <FadeInSection delay={1}>
+        <Hero />
+      </FadeInSection>
+
+      <FadeInSection delay={100}>
+        <SectionAbout />
+      </FadeInSection>
+
+      <FadeInSection delay={200}>
+        <HeadMsg />
+      </FadeInSection>
+
+      <FadeInSection delay={300}>
+        <Mission />
+      </FadeInSection>
+
+      <FadeInSection delay={400}>
+        <Vision />
+      </FadeInSection>
+
+      <FadeInSection delay={500}>
+        <CoreValues />
+      </FadeInSection>
+
+      <FadeInSection delay={600}>
+        <Leader />
+      </FadeInSection>
+
+      <FadeInSection delay={700}>
+        <QuickActions />
+      </FadeInSection>
+
+      <FadeInSection delay={800}>
+        <EventsSection />
+      </FadeInSection>
+
+      <FadeInSection delay={900}>
+        <WempianSection />
+      </FadeInSection>
+
+      <FadeInSection delay={1000}>
+        <LatestNews />
+      </FadeInSection>
+
+      <FadeInSection delay={1100}>
+        <Footer />
+      </FadeInSection>
     </div>
   );
 };

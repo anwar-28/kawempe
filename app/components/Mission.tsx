@@ -1,7 +1,7 @@
-import { Crimson_Text } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 import Link from "next/link";
 
-const schoolFont = Crimson_Text({
+const schoolFont = Crimson_Pro({
   subsets: ["latin"],
   weight: "400",
 });
@@ -10,7 +10,9 @@ const Mission = () => {
   return (
     <div className="flex bg-black/40 flex-col text-center lg:flex-row justify-center items-center bg h-fit">
       <div className="mx-10 my-20  text-white">
-        <h2 className="text-2xl lg:text-4xl font-semibold mb-4">
+        <h2
+          className={`${schoolFont.className}text-2xl lg:text-4xl font-semibold mb-4`}
+        >
           School Mission
         </h2>
 
