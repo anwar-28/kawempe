@@ -5,12 +5,14 @@ import {
   Lexend,
   Montserrat,
   Outfit,
+  Poppins,
   TASA_Explorer,
   Zalando_Sans_Expanded,
 } from "next/font/google";
 import "./globals.css";
 
-const montserratFont = TASA_Explorer({
+const montserratFont = Poppins({
+  weight: ["700"],
   subsets: ["latin"],
 });
 

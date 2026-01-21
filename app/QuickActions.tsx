@@ -15,7 +15,7 @@ const QuickActions = () => {
         "Have questions about admissions or enrollment? Contact us for guidance on entry requirements, procedures, and important dates.",
       buttonText: "Contact Us",
       href: "/contact",
-      bgColor: "bg-red-400",
+      bgColor: "bg-red-500",
     },
     {
       title: "Online Registration",
