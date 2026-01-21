@@ -7,7 +7,7 @@ import LatestNews from "./components/LatestNews";
 import Leader from "./components/Leader";
 import Mission from "./components/Mission";
 import NavBar from "./components/NavBar";
-import QuickActions from "./components/QuickActions";
+import QuickActions from "./QuickActions";
 import SectionAbout from "./components/SectionAbout";
 import Vision from "./components/Vision";
 import WempianSection from "./components/WempianSection";
